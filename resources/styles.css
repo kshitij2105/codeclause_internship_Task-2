@@ -1,0 +1,1479 @@
+/* Global Style */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* This removes the outline on tablets or phones when tapped */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+h1, h2{
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: #3a2d44;
+    color: white;
+    -webkit-transition: all .2s linear ;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+/* Wrapper for Parallax effect */
+.wrapper{
+    /* border: 4px solid white; */
+    background: transparent;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 50px;
+}
+
+/* Styling for every page */
+.page{
+    /* border: 1px solid yellow; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    height: 100vh;
+}
+
+/* Home page */
+/* Navigation bar */
+.navbar{
+    /* border: 5px solid blue; */
+    background-color: #3a2d44;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    -webkit-transition: all .2s linear ;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.navbar > a{
+    text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
+    margin-left: 5%;
+    text-decoration: none;
+    color:white;
+    -webkit-transition: font-size 1s ;
+    -moz-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s ;
+}
+
+.navbar > a:hover{
+    font-size: 2rem;
+}
+
+/* Hidden mobile picture and description */
+.desc-mobile, .mobile-pic-container{
+    display: none;
+}
+
+/* Light dark mode switch */
+.toggle, #circle{
+    border-radius: 50px;
+}
+
+.toggle{
+    /* border: 1px solid white; */
+    animation-delay:3s ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 6%;
+    height: 4%;
+    background-color:#e79849;
+    -webkit-transition: all .1s linear ;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+/* Sun and moon icons */
+.mode{
+    /* border: 1px solid black; */
+    height: 70%;
+}
+
+/* Circle for toggle */
+#circle{
+    /* border:1px solid yellow; */
+    cursor: pointer;
+    background-color:#e79849;
+    position:absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-transition: all .2s linear ;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .1s linear;
+}
+
+/* Introduction */
+.intro{
+    /* border: 1px solid purple; */
+    width: 80vw;
+    height:80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-transform: translatez(-50px) scale(2) ;
+    -moz-transform: translatez(-50px) scale(2);
+    -o-transform: translatez(-50px) scale(2);
+    transform: translatez(-50px) scale(2);
+}
+
+/* Hello span */
+.hello > span{
+    font-size: 8rem;
+    color: #C8C7D6;
+    text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
+}
+
+/* Text below Hello! */
+.desc{   
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 200;
+    letter-spacing: .3rem;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+/* Name Span */
+.desc > span{
+    font-style: italic;
+    color: #eb8015;
+}
+
+/* Animation for 'Hello!', description, navigation bar, and toggle */
+.hello > span, .desc,.navbar,.toggle{
+    opacity: 0;
+    -webkit-animation-name:appears ;
+    -moz-animation-name: appears;
+    -o-animation-name: appears;
+    animation-name: appears;
+
+    -webkit-animation-duration: 2.5;
+    -moz-animation-duration: 2.5s;
+    -o-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
+}
+
+#h{
+    -webkit-animation-delay:1s ;
+    -moz-animation-delay:1s ;
+    -o-animation-delay:1s ;
+    animation-delay: 1s;
+}
+
+#e{
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -o-animation-delay:1.2s ;
+    animation-delay: 1.2s;
+}
+
+#l{
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+    -o-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+
+#l2{-webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+#o{
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+
+#excl{
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+    -o-animation-delay: 1.7s;
+    animation-delay: 1.7s;
+}
+
+.navbar{
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+/* Socials Container */
+.socials{
+    /* border: 1px solid blue; */
+    position: relative;
+    align-self: flex-end;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+    -webkit-animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
+    -moz-animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
+    -o-animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
+    animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
+    width: 5.8vw;
+    height: 5.8vw;
+    opacity: 0;
+}
+
+/* Animation to make the social medias move to the left */
+.socials > a{
+    /* border: 1px solid black; */
+    display: flex;
+    border-radius: 100%;
+    margin: 0.8vw;
+    position: absolute;
+    right: 0;
+}
+
+/* Resume and the animation to move it all the way to the left*/
+.res{
+    -webkit-animation: moveEnd 2.5s 4s forwards ;
+    -moz-animation: moveEnd 2.5s 4s forwards;
+    -o-animation: moveEnd 2.5s 4s forwards;
+    animation: moveEnd 2.5s 4s forwards;
+}
+
+.resume-style {
+    font-size: .8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #473757 ;
+    background-color: #ACA7C2;
+    -webkit-transition:background-color .5s, color .5s ;
+    -moz-transition: background-color .5s, color .5s;
+    -o-transition: background-color .5s, color .5s;
+    transition: background-color .5s, color .5s;
+}
+
+
+/* LinkedIn moves to the middle*/
+.li{
+    -webkit-animation: moveMiddle 2.5s 4s forwards;
+    -moz-animation: moveMiddle 2.5s 4s forwards;
+    -o-animation: moveMiddle 2.5s 4s forwards;
+    animation: moveMiddle 2.5s 4s forwards;
+}
+
+/* Replacing color for the svgs by using currentcolor*/
+.socials svg{
+    color: #ACA7C2;
+}
+
+/* Changes colors for socials and resume when cursor hovers on elements */
+.socials svg, .resume-style{
+    /* border: 1px solid black; */
+    -webkit-transition:all .5s ;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    height: 4.2vw;
+    width: 4.2vw;
+    border-radius:80%;
+}
+
+.socials svg:hover{
+    color: rgb(209, 134, 73);
+}
+
+.resume-style:hover{
+    background-color: rgb(209, 134, 73);
+}
+
+/* First curve divider obtained from https://www.shapedivider.app/ */
+.divider-one {
+    /* border: 1px solid black; */
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.cdivider-one svg {
+    position: relative;
+    display: block;
+    width: calc(134% + 1.3px);
+    height: 6vw;
+}
+
+.divider-one .shape-fill {
+    fill: rgb(116, 92, 133);
+}
+
+/* Projects Page*/
+/* Projects header */
+.projects > h1{
+    text-align: center;
+    padding: .5rem;
+    width: 100%;
+    position: absolute;
+    position: absolute;
+    top: 8%;
+}
+
+.projects{
+    /* border: 2px solid white; */
+    background-color: rgb(116, 92, 133);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Blob design one behind slides */
+.blob{
+    position: absolute;
+    z-index: -2;
+    opacity: .2;
+    color: #E8DAFF;
+}
+
+/* Slides */
+.slide{
+    /* border: 2px solid red; */
+    margin:2rem;
+    height: 60%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation-name: fade ;
+    -moz-animation-name: fade;
+    -o-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration:1.5s ;
+    -moz-animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+/* Project image container */
+.img-container{
+    /* margin-bottom: 1rem; */
+    border: 5px solid #eb8015;
+    width:90%;
+    height: 80%;
+    background-size: cover;
+    background-position:top;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+}
+
+.img-container.one{
+   background-image: url(../resources/images/projects/latte-again.png);
+}
+
+.img-container.two{
+    background-image: url(../resources/images/projects/portfolio.png);
+}
+.img-container.three{
+    background-image: url(../resources/images/projects/Unit.png);
+}
+.img-container.four{
+    background-image: url(../resources/images/projects/carprice.png);
+}
+
+
+/* Project Name */
+.text-box{
+    border: 3px solid #eb8015;
+    width: 20%;
+    height: 10%;
+    margin-bottom: 1rem;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    text-align: center;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1f3019;
+}
+
+/* Arrows to switch slides */
+.prev,.next{
+    padding: 1%;
+    font-size: 6rem;
+    cursor: pointer;
+    -webkit-transition:opacity .5s ;
+    -moz-transition:opacity .5s ;
+    -o-transition:opacity .5s ;
+    transition: opacity .5s;
+}
+
+.prev:hover,.next:hover{
+    opacity: .5;
+}
+
+/* About Page */
+/* Page divider 2 obtained from https://www.shapedivider.app/*/
+.divider-two {
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.divider-two svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 26vw;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotateY(180deg);
+}
+
+.divider-two .shape-fill {
+    fill: rgb(116, 92, 133);
+}
+
+/* About content */
+.about{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+}
+
+/* About page content Container */
+.container{
+    /* border: 1px solid blue; */
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    width: 90%;
+    height:80%;
+  }
+  
+/* About header */
+.abouth1{
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bio and miscellaneous(music and skills) */
+.bio, .misc > *{
+    height: 50%;
+    background-color: rgb(129, 118, 141);
+    border-left: 5px solid #eb8015;
+}
+  
+.bio{
+    /* border: 1px solid black; */
+    margin-right: 1rem;
+    width: 20%;
+    height: 90%;
+}
+  
+.bio > *{
+    /* border: 1px solid green; */
+    height: 50%; 
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Facts about me */
+.about-me{
+    /* border: 1px solid red; */
+    padding: 0 1rem 1rem 1rem ;
+    align-items: flex-start;
+    font-size: .9rem;
+}
+
+.about-me > *{
+    margin:.5rem;
+}
+  
+/* Picture of me*/
+.picture{
+    /* border: 1px solid black; */
+    border-radius: 100%;
+    height: 13vw;
+    width: 13vw;
+    background-size: cover;
+    background-position:center;
+    background-image: url('../resources/images/selfie.jpg');
+}
+  
+/* Container for music and skills */
+.misc{
+    /* border: 1px solid blue; */
+    width:60%;
+    height:90%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+  
+.misc > *{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    width:100%;
+    height: 49%;
+}
+
+/* Skills/languages */
+.skills{
+    width: 100%;
+    flex-direction: column;
+}
+
+.languages{
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    height: 75%;
+    width: 85%;
+}
+
+.skill{
+    /* border: 1px solid green; */
+    margin: 0 1rem;
+    border-radius: 100%;
+    width: 4vw;
+    height: 4vw;
+    background-position: center;
+    background-size: cover;
+    -webkit-transition:all 1s ;
+    -moz-transition:all 1s ;
+    -o-transition:all 1s ;
+    transition: all 1s;
+}
+
+/* Brings the skills up a little bit when cursor hovers */
+.skill:hover{
+    -webkit-transform:all 1s ;
+    -moz-transform:all 1s ;
+    -o-transform:all 1s ;
+    transform: translateY(-20px);
+}
+
+#css{
+    background-image: url(../resources/images/skills/css3-logo-png-transparent.png);
+}
+
+#html{
+    background-image: url(../resources/images/skills/html.png);
+}
+
+#js{
+    background-image: url(../resources/images/skills/javascript.png);
+}
+
+#figma{
+    background-image: url(../resources/images/skills/figma.png);
+}
+
+#github{
+    background-image: url(../resources/images/skills/github.png);
+}
+
+#java{
+    background-image: url(../resources/images/skills/java.png);
+}
+
+#python{
+    background-image: url(../resources/images/skills/python.png);
+}
+
+/* Contact Page */
+.contact{
+    /* border: 1px solid yellow; */
+    background-color: rgb(116, 92, 133);
+    flex-direction: row;
+    
+}
+
+/* Contact header */
+h2{
+    font-size: 2.25rem;
+    position: absolute;
+    bottom: 3rem;
+    left: 4rem;
+}
+
+.letsConnect,.contactFields{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+}
+
+.contactFields{
+    /* border: 1px solid yellow; */
+    font-size: 1.5rem;
+}
+
+/* Let's Connect */
+.contact-content{
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20%;
+    width: 80%;
+}
+
+.contact-content > h1{
+    align-self: center;
+}
+
+/* Orange line decorations */
+.line-deco{
+    /* border: 1px solid red; */
+    background-color: #eb8015;
+    width: 30%;
+    height: 3%;
+}
+
+.line-deco.two{
+    align-self: flex-end;
+}
+
+/* Contact form */
+form{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 60%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    color: white;
+    border: 2px solid #eb8015;
+    background-color: rgb(129, 118, 141);
+}
+
+input{
+    margin-bottom: 1rem;
+    height: 10%;
+}
+
+textarea{
+    min-height: 30%;
+    margin-bottom: 3rem;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+label{
+    margin-bottom: .5rem;
+}
+
+/* Submit Button */
+button::before{
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height:101%;
+    width: 0%;
+    background:#403f41;
+    opacity: .2;
+    z-index: -1;
+    -webkit-transition:width 1s ;
+    -moz-transition:width 1s ;
+    -o-transition:width 1s ;
+    transition: width 1s;
+}
+
+/* A trick to give the button the animation by using combining pseudo class and pseudo element*/
+button:hover::before{
+    width: 105%;
+}
+
+button{
+    background-color: white;
+    color: rgb(66, 21, 66);
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 0;
+    min-height: 10%;
+    width: 40%;
+    align-self: center;
+    box-shadow: 6px 6px 0px 1px #eb8015;
+}
+
+button > p {
+    z-index: 1;
+}
+
+button:active{
+    -webkit-transform: translate(6px, 6px);
+    -moz-transform: translate(6px, 6px);
+    -o-transform: translate(6px, 6px);
+    transform: translate(6px, 6px);
+    box-shadow: none;
+}
+
+/* Contact Divider */
+.divider-contact {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.divider-contact svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 500px;
+}
+
+.divider-contact .shape-fill {
+    fill:#3a2d44;;
+}
+
+/* footer */
+.footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(57, 38, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animations */
+@keyframes wexpand{
+    100%{
+        width:17.5vw;
+    }
+}
+
+@keyframes moveMiddle{
+    100%{
+        -webkit-transform:translateX(-5.8vw) ;
+        -moz-transform: translateX(-5.8vw);
+        -o-transform: translateX(-5.8vw);
+        transform: translateX(-5.8vw);
+    }
+}
+
+@keyframes moveEnd{
+    100%{
+        -webkit-transform:translateX(-11.7vw) ;
+        -moz-transform: translateX(-11.7vw);
+        -o-transform: translateX(-11.7vw);
+        transform: translateX(-11.7vw);
+    }
+}
+
+@keyframes appears{
+    100%{
+      opacity:1;
+    }
+}
+
+@keyframes stretchUp{
+    to{
+        height: 150%;
+    }
+}
+
+@keyframes stretch{
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes fade{
+    from {opacity: .5} 
+    to {opacity: 1}
+}
+
+/* Media queries */
+/* Laptop */
+@media screen and (max-width:1470px){
+    /* Reducing font sizes For any screen sizes less than 1470 */
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .desc{
+        font-size: 1.5rem;
+    }
+
+    .hello > span{
+        font-size: 7rem;
+    }
+
+    .about-me{
+        font-size: .8rem;
+    }
+}
+
+
+/* Tablet*/
+@media screen and (max-width:1180px){
+    /* Brings intro closer to the screen */
+    .wrapper{
+        perspective: 70px;
+    }
+    
+    /* Intro resized */
+    .intro{
+        position: absolute;
+        top: 10%;
+        z-index: 0;
+        width: 70%;
+    }
+
+    /* Divider 2 */
+    .divider-two{
+        top:-10px;
+    }
+
+    /* Projects */
+    .img-container{
+        height: 60%;
+    }
+
+    /* Font size adjustments */
+    h1{
+        font-size: 2.3rem;
+    }
+
+    h3{
+        font-size: .9rem;
+    }
+
+    .desc{
+        font-size: 1.2rem;
+    }
+
+    .hello > span{
+        font-size: 6rem;
+    }
+
+    .prev,.next{
+        font-size: 4rem;
+    }
+
+    .about-me{
+        display: flex;
+        font-size: .6rem;
+    }
+
+   /* Turns off hover effects */
+   .navbar > a:hover{
+        font-size: 1rem;
+    }
+
+   .socials svg:hover{
+        color: #ACA7C2;
+    }
+
+   .resume-style:hover{
+        background-color: #ACA7C2;;
+    }
+
+   .prev:hover,.next:hover{
+        opacity: 1;
+    }
+
+   .skill:hover{
+        -webkit-transform:rotateY(0) ;
+        -moz-transform:rotateY(0) ;
+        -o-transform:rotateY(0) ;
+        transform: rotateY(0);
+    }
+
+   /* Removes button styles */
+    button::before{
+        content: none;
+    }
+
+    button{
+        box-shadow: none;
+        appearance: none;
+        -webkit-tap-highlight-color: #3a2d44;
+    }
+
+    button:active{
+        -webkit-transform:translate(0) ;
+        -webkit-transform:translate(0) ;
+        -webkit-transform:translate(0) ;
+        transform: translate(0) ;
+    }
+
+    form{
+        height: 65%;
+    }
+}
+
+/* Tablet portrait mode*/
+@media screen and (max-width:900px) {
+    /* Readjusts all pages */
+    .page{
+        height: 90vh;
+    }
+
+    /* First curve divider */
+    .divider-one{
+        /* border: 1px solid black; */
+        position: relative;
+        top: 3px;
+    }
+
+    /* Home page */
+    .home{
+        /* border: 5px solid black; */
+        justify-content: flex-end;
+    }
+
+    /* Toggle */
+    .toggle{
+        width: 15vw;
+        height: 7vw;    
+        animation: none;
+        opacity: 1;
+    }
+
+    /* Navigation bar */
+    .navbar{
+        /* border: 1px solid black; */
+        padding: 1rem;
+        opacity: 1;
+        font-size: 2rem;
+        border-radius: 0;
+        width: 100%;
+        height: 5%;
+        margin-top: 3%;
+    }
+    
+    .navbar > a{
+        /* border: 1px solid black; */
+        margin: 0 5% ;
+    }
+
+    /* Disables hover */
+    .navbar > a:hover{
+        font-size: 2rem;
+    }
+
+    .intro{
+        /* border: 1px solid white; */
+        top: 40%;
+        height: 50vh;
+        width: 75vw;
+    }
+
+    .desc,.hello, .home > span, .blob, .divider-two,.divider-contact{
+        display: none;
+    }
+
+    /* Social media and resume */
+    .socials{
+        /* border: 1px solid black; */
+        animation: none;
+        opacity: 1;
+        width: 60%;
+        height: 20%;
+        box-shadow: none ;
+        align-self: flex-end;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .socials > a{
+        /* border: 1px solid black; */
+        animation: none;
+        position: relative;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .socials svg, .resume-style{
+        height: 100%;
+        width: 100%;
+    }
+
+    .resume-style{
+        font-size: 1rem;
+    }
+
+    /* Description mobile and tablet portrait only */
+    .desc-mobile{
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction:column ;
+        margin-bottom: .5rem;
+        font-size: 3rem;
+    }
+
+    .desc-mobile > p > span{
+        color: #eb8015;
+    }
+
+    .desc-mobile :nth-child(2){
+        margin-bottom: .5rem;
+    }
+
+    .desc-mobile :nth-child(3){
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    /* Picture on home page for portrait tablet and mobile*/
+    .mobile-pic-container{
+        /* border: 1px solid red; */
+        display: block;
+        position: absolute;
+        right: 10%;
+        top: -15%;
+        width: 40vw;
+        height: 25vh;
+        box-shadow: 12px -10px 0px 0px rgba(235,128,21,1);
+        background-image: url('../resources/images/selfie.jpg');
+        background-size: cover;
+        background-position:center;
+    }
+
+    /* Projects */
+    .projects > h1{
+        font-size: 2.3rem;
+    }
+
+    .projects{
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .slide{
+        width: 80%;
+        height: 40%;
+        margin: 0 .5rem;
+    }
+
+    .text-box{
+        box-shadow: none;
+        width: 100%;
+        height: 20%;
+        border-radius: 0;
+        border: 20px;
+        background-color: #e6b17c;
+    }
+
+    .img-container{
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .prev,.next{
+        display: flex;
+    }
+
+    /* About */
+    .abouth1{
+        height: 20%;
+    }
+
+    .container{
+        /* border: 1px solid black; */
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .music,.picture-container{
+        display: none;
+    }
+
+    .bio{
+        width: 100%;
+        height: 40%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about-me{
+        /* border: 1px solid white; */
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: 1.5rem;
+    }
+
+    .misc{
+        /* border: 1px solid navajowhite; */
+        width: 100%;
+        height: 25%;
+    }
+
+    /* Skills */
+    .languages{
+        justify-content: center;
+    }
+
+    .skills{
+        /* border: 1px solid white; */
+        width: 100%;
+        height: 100%;
+    }
+    
+    .skill{
+        /* border: 1px solid black; */
+        width: 5rem;
+        height: 5rem;
+    }
+    .letsConnect{
+        display: none;
+    }
+
+    /* Contact page */
+    .contact h2{
+        font-size: 4rem ;
+        position: absolute;
+        top: 15%;
+        left: 0;
+        margin-left: 10%;
+    }
+    
+    .contactFields{
+        /* border: 1px solid green; */
+        width: 100%;
+        height: 80%;
+        align-self: flex-end;
+    }
+
+    form{
+        /* border: 1px solid yellow; */
+        height: 80%;
+        width: 80%;
+    }
+
+    button{
+        height: 10%;
+        font-size: 80%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:767px){
+    /* Navigation bar */
+    .navbar{
+        font-size: 1rem;
+    }
+
+    .navbar > a{
+        margin: 0 1rem;
+    }
+
+    /* Disables hover */
+    .navbar > a:hover{
+        font-size: 1rem;
+    }
+
+    /* Social media and resume */
+    .socials > a{
+        /* border: 1px solid black; */
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .resume-style{
+        font-size: .5rem;
+    }
+    
+    .desc-mobile{
+        /* border: 1px solid black; */
+        font-size: 1.5rem;
+    }
+
+    /* "Front-end developer " */
+    .desc-mobile :nth-child(3){
+        font-size: .7rem;
+    }
+
+    /* Projects page*/
+    .prev,.next{
+        display: none;
+    }
+
+    .projects{
+        /* border: 1px solid yellow; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide{
+        height: 30%;
+    }
+
+    /* About Page */
+    .about-me{
+        font-size: .8rem;
+    }
+
+    .skill {
+        /* border: 1px solid black; */
+        margin: 0 .5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    /* Contact Page */
+    .contact h2{
+        font-size: 2rem;
+    }
+
+    textarea{
+        height: 80%;
+    }
+
+    button{
+        height: 40%;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width:900px)  and (orientation:landscape){
+    .page{
+        height: 200vh;
+    }
+
+    /* Home page */
+    .home{
+        height: 100vh;   
+    }
+
+    .navbar{
+        font-size: 1rem;
+        height: 20%;
+    }
+
+    .navbar>a:hover{
+        font-size: 1rem;
+    }
+    
+    .toggle{
+        width: 8vw;
+        height: 4vw;
+    }
+
+    .intro{
+        justify-content: center;
+    }
+
+   .resume-style{
+        font-size: .5rem;
+    }
+
+    .socials{
+        /* border: 1px solid black; */
+        width: 50%;
+        height: 30%;
+        bottom: 50px;
+    }  
+   
+   .socials > a {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .desc-mobile{
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    .desc-mobile :nth-child(3){
+        font-size: 1rem;
+    }
+
+    .mobile-pic-container{
+        display: none;
+    } 
+
+    /* Projects page */
+    .prev, .next{
+        display: none;
+    }
+
+    .projects{
+        flex-direction: column;
+    }
+
+    .slide{
+        height: 30%;
+        width: 60%;
+    }
+
+    /* About page */
+    .about-me{
+        font-size: 1rem;
+    }
+
+    .skill{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/* New classes for light mode */
+.white-background{
+    background: white;
+    -webkit-transition: all .2s linear ;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+span.name-light, .desc-mobile .name-light{
+    color:#403f41;
+    font-weight: 600;
+}
+
+.toggle-light{
+    background-color: #403f41;
+}
+
+#circle.toggle-right{
+    transform: translateX(100%);
+    background-color: black;
+    -webkit-transition: all .1s linear ;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+.font-light, span.font-light,svg.font-light,.navbar > .font-light{
+    color:black;
+}
+
+.resume-light{
+    background-color: black;
+    color: white;
+}
+
+
+#projects.projects-light, .contact-light{
+    background-color: black;
+}
+
+.divider-one-light .shape-fill, .divider-two-light .shape-fill{
+    fill:black;
+}
+
+.border-white{
+    border-color: white;
+}
+
+
+.about-light{
+    background-color: #403f41;
+    border-color: #403f41;
+}
+
+.divider-contact-white .shape-fill{
+    fill:white;
+}
+
+.input-light{
+    border-color: white;
+    background-color: #403f41;
+}
+
+.button-light{
+    box-shadow: 6px 6px 0px 1px #403f41;
+    color: black;
+}
+
+.footer-light{
+    background-color: white;
+    color: black;
+    
+}
+
+.intro-light{
+    color: black;
+}
+
+.mobile-img-container-light{
+    box-shadow: 12px -10px 0px 0px black;
+}
+
+.blobs-light{
+    color: white;
+}
+
